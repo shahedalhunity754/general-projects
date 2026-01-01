@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <style>
+        /* Reset بعض الخصائص الأساسية */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+           background: linear-gradient(to bottom right, #767693,#ffffdc); /* خلفية هادئة */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 50px rgba(0,0,0,0.2);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .contact-container h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .contact-container p {
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .contact-container input,
+        .contact-container textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-container input:focus,
+        .contact-container textarea:focus {
+            border-color: rgb(122, 32, 225);
+            box-shadow: 0 0 5px rgb(122, 32, 225);
+            outline: none;
+        }
+
+        .contact-container textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-container button {
+            background-color: rgb(122, 32, 225);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-container button:hover {
+            background-color: rgb(122, 32, 225);
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>We would love to hear from you! Please fill out the form below and we will get in touch with you shortly.</p>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>

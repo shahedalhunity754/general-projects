@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+      <title> WenderMap.com </title><!--we will put dot to call the class -->
+      <style>
+        body{
+          background: linear-gradient(to bottom right, #c2c2cc,#ffffdc);/*تدرج لوني بشكل خطي */
+            background-size: cover;/*حجم الخلفيه تتكيف مع حجم العنصر*/
+            margin: 0;/* المساحه بين العناصر */
+        }
+        
+       .address {
+            text-align: center;/*بحدد مكان النص */
+            color:#202761;
+            font-size: 90px;/*حجم الخط*/
+            margin-bottom: 60px;/*بتتحكم بالمساحه بين العنصر واللي تحته*/
+        }
+        
+        .paragraph{
+           display:block;/*كيف بنعرض  العنصر */
+           text-align:center;/*النص بكون بالوسط */
+           font-size: 35px ;
+           color:#202761;
+        }
+        .pages{
+            background-color:#202761;
+            overflow: hidden;/*بحدد طريقه عرض العناصر الزائد */
+            display :flex;
+            justify-content: center;/*بتتحكم بطريقه عرض العناصر اللي بتكون داخل الحاويه */
+            position:sticky;/*بتخلي العنصر يضل ثابت */
+            top: 0;
+            z-index: 1000;/* بتتحكم في ترتيب العناصر من ناحيه الظهور */
+        }
+        .pages a{
+            color: white;
+            text-decoration: none;/*تحديد اتجاه العنصر */
+            padding: 35px 85px ;/* المسافه الداخليه للعنصر */ 
+            font-size: 30px;
+            transition: background-color 0.3s;/* بتخلي تغيير لون الخلفيه سلس */
+        }
+        .slideshow-container{
+          width: 80%;/* بتتحكم بعرض العنصر */
+          max-width: 600px;/*الحد الاقصى للعرض*/
+          margin: auto;
+          position: relative;/*البوزيشين بخليني اتحكم بحركه العنصر بس الريلاتيف بتخليه مكانه */
+          height: 400px;
+        }
+         .slide {
+        width:100%;
+      height: 400px;
+      object-fit: cover;/*بتتحكم بكيفيه عرض العنصر (بتستخدم عاده مع الصور و الفيديوهات )*/ 
+      border-radius: 10px;/*بتتحكم بزوايا العنصر بشكل مقوس */
+      display: none;
+      position: absolute;
+      top: 0;
+      left:0;
+      transition: opacity 5s ease-in-out;
+    }
+    .active {
+      display: block; /* يبين صورة واحدة فقط */
+    }
+
+    /* أزرار */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 10px;
+      cursor: pointer;/*لما نمرر الماوس فوقه بصير علىى شكل يد */
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }/*بحدد المسافه بين حافه العناصر والاسهم*/
+   
+
+        </style>
+    </head>
+    <body>
+    <div class = "pages">
+        <a href ="asia.html">ASIA</a>
+        <a href ="europe.html">EUROPE</a>
+        <a href ="africa.html">AFRICA</a>
+        <a href ="contact.html">CONTACT US</a>
+    </div>  
+      <p class = "address">Wender Map</p><!--we  put the class item to make sure that the css part will apply only in this paragraph -->
+      <sring class = "paragraph">your simple guide to the world's best travel spots , tips and photos to inspire your journey </sring>
+      <br><br><br><br><br>
+      <div class ="slideshow-container">
+        <img src="imges/South Korea 🧡.jpeg" class ="slide active"><!--بتظهر اول صوره-->
+        <img src="imges/سور الصين العظيم.jpeg" class ="slide">
+        <img src="imges/download (3).jpeg" class ="slide">
+        <img src="imges/download (4).jpeg" class ="slide">
+        <img src="imges/download (5).jpeg" class ="slide">
+        <img src="imges/download (6).jpeg" class ="slide">
+        <img src="imges/download (7).jpeg" class ="slide">
+        <img src="imges/download (8).jpeg" class ="slide">
+
+
+        <span class="prev">&#10094;</span><!--الكود هاد حسب الاكواد العالميه هو السهم اليسار , فيها اسهم التنقل بين الصور-->
+        <span class ="next">&#10095;</span><!-- تستخدم السبان عشان نحط خلفيه ورا الاشي اللي حاطينه -->
+
+      </div>
+      <script>
+        let slides=  document.querySelectorAll(".slide");//بتجيب كل الصور اللي عندها كلاس سلايدز//
+        let index =0;//مؤشر لرقم الصوره المعروضه//
+
+        function showSlide(i){//بتخفي الكل وتظهر صوره وحده حسب الرقم// 
+          slides.forEach(slide => slide.classList.remove("active"));/*بخفي كل الصور */
+          slides[i].classList.add("active");//يفعل الصور والمطلوبه//
+
+        }
+        function nextSlide(){//بزيد المؤشر واحد//
+          index=(index + 1) % slides.length;//يتاكد انه ما يطلع من عدد الصور//
+          showSlide(index);
+        }
+        function prevSlide(){//بنقص واحد//
+          index=(index-1+ slides.length) % slides.length;
+          showSlide(index);
+        }
+        document.querySelector(".next").addEventListener("click",nextSlide);//الادد ايفينت مربوطه مع الازرار يعني لما اكبس ع السهم بتتغير الصوره//
+         document.querySelector(".prev").addEventListener("click",prevSlide);
+                 setInterval(() => {nextSlide();},4000)//بتغير الصوره تلقائيا كل اربع ثواني//
+
+      </script>
+    </body>
+    
+</html>

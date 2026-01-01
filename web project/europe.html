@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> EurpoeWenderMap.com</title>
+        <style>
+            body{
+             background: linear-gradient(to bottom right, #767693,#ffffdc);
+            background-size:cover;
+            margin: 0;
+           
+        }
+        
+        .img{
+            display:flex;
+            flex-direction: row-reverse;/* بخلي الصوره على اليمين وما استخدمنا الفلوت عشان قاعدين بنشتغل بفليكس بوكس */
+            align-items: center;/*بخلي النص  بمحاذاه وسط الصوره*/
+            gap: 30px;/*مسافه بين النص والصوره*/
+            color: aliceblue;
+
+        }
+        .europe-img{
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin-top: 30px;/*بتخلي الصوره تنزل لتحت بمقدار معين */
+            object-fit:cover;/*بقص الصوره عشان ما تتمدد*/
+            box-shadow: 0 4px 10px rgb(255, 255, 255);
+        }
+        .img2{
+             display:flex;
+            align-items: center;/*بخلي النص  بمحاذاه وسط الصوره*/
+            gap: 30px;/*مسافه بين النص والصوره*/
+             color: aliceblue; 
+        
+        }
+        .hover-text{
+            font-size: 16px;
+            transition: all 0.3 ease;
+            
+            color: #ffffff;
+            text-shadow: 2px 2px 2px black, 0 0 10px ,#500993;
+
+
+        }
+        .hover-text:hover{
+            color: #000000;
+            transform: scale(1.1);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        .text-box{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif', sans-serif;
+            
+        }
+        .text-box h1{
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .text-box h4{
+            line-height:1.6;
+            text-align: justify;
+        }
+        .star {
+                font-size: 30px;
+                cursor: pointer;
+                color: gray;
+            }
+            .star:hover, .star.hovered {
+                color: gold;
+            }
+            .rating-container {
+                text-align: center;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="img text-box">
+        <a href="https://ar.wikipedia.org/wiki/%D8%A8%D8%B1%D8%AC_%D8%A5%D9%8A%D9%81%D9%84"><img src="imges/خلفيات لبرج ايفل في باريس Eiffel Tower Wallpapers in Paris Fonds d'écran Tour Eiffel à Paris.jpeg" class="europe-img"></a>
+        <pre style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"<h1 style="align-items: center;" >                                                                                                           THE EIFFEL TOWER </h1>
+        <h4 class="hover-text">             The Eiffel Tower, located in Paris, France, is one of the most famous landmarks in the world. Built in
+            1889 for the World's Fair, the tower stands 330 meters tall and is admired for its unique iron structure. Today, it is a symbol of love
+            and romance, attracting millions of visitors every year. Tourists can enjoy stunning views of Paris from its observation decks, making 
+            the Eiffel Tower a must-see destination for anyone visiting the city.</h4></pre>
+
+        </div>
+          <div class="rating-container">
+   
+            <p>Rate :</p>
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+            <p class="rating-value">your rating : 0</p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+         <div class="img2 text-box">
+         <a href="https://ar.wikipedia.org/wiki/%D9%82%D8%B5%D8%B1_%D9%86%D9%88%D9%8A%D8%B4%D9%81%D8%A7%D9%86%D8%B4%D8%AA%D8%A7%D9%8A%D9%86"><img src="imges/صور _ معالم شهيرة من مدن حول العالم - شبكة ابو نواف.jpeg" class="europe-img"></a>
+         <pre style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"<h1 style="align-items: center;">                                                                                                           NEUSCHWANSTEIN CASTLE </h1>
+       <h4 class="hover-text">              Neuschwanstein Castle, located in Bavaria, Germany, is one of the most enchanting castles in the world.
+        Built in the 19th century by King Ludwig II, it looks like a fairytale palace with its tall towers and stunning mountain views. The castle
+        inspired the famous Disney castles and continues to attract millions of visitors each year. Surrounded by beautiful forests and lakes,
+        Neuschwanstein is a magical destination that combines history, romance, and breathtaking scenery. </h4></pre>
+         </div>
+        <div class="rating-container">
+   
+            <p>Rate :</p>
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+            <p class="rating-value">your rating : 0</p>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="img text-box">
+        <a href="https://ar.wikipedia.org/wiki/%D8%AF%D8%A7%D8%B1_%D8%A3%D9%88%D8%A8%D8%B1%D8%A7_%D9%81%D9%8A%D9%8A%D9%86%D8%A7"><img src="imges/Vienna opera at the blue hour_ Austria.jpeg" class="europe-img"></a> 
+                 <pre style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"<h1 style="align-items: center;">                                                                                                          THE VIENNA STATE  </h1>
+       <h4 class="hover-text">              The Vienna State Opera is one of the most famous opera houses in the world, located in the heart of Vienna,
+        Austria. Opened in 1869, it is known for its grand architecture and outstanding performances of opera and ballet. Every year, it hosts hundreds
+        of shows and attracts music lovers from all over the globe. The building itself is a masterpiece, combining history, culture, and art in a
+        way that makes it a must-see landmark in Vienna.</h4></pre>
+        </div>
+       <div class="rating-container">
+   
+            <p>Rate :</p>
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+            <p class="rating-value">your rating : 0</p>
+        </div>
+ 
+        <br>
+        <br>
+        <br>
+        <br> 
+         <div class="img2 text-box">
+         <a href="https://ar.wikipedia.org/wiki/%D9%82%D9%84%D8%B9%D8%A9_%D8%A8%D8%B1%D8%A7%D8%BA"><img src="imges/Prague Castle.jpeg" class="europe-img"></a>
+         <pre style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"<h1 style="align-items: center;">                                                                                                          PRAGUE CASTLE </h1> 
+               <h4 class="hover-text">             Prague Castle is one of the largest and most remarkable castles in the world, located in the heart of Prague,
+                the capital of the Czech Republic. Dating back to the 9th century, it has served as the residence of Bohemian kings, Holy Roman emperors, and 
+                Czech presidents, making it a place of immense historical and political significance. The castle complex is like a small city on its own,
+                containing majestic palaces, ancient churches, defensive towers, and peaceful gardens. At its center lies the impressive St. Vitus Cathedral,
+                a masterpiece of Gothic architecture that dominates the skyline. Visitors can walk through the Golden Lane, explore medieval halls, and enjoy
+                breathtaking views of the city from its terraces. Today, Prague Castle is not only a UNESCO World Heritage site but also a living symbol of 
+                Czech culture, attracting millions of visitors from around the world every year. </h4></pre>
+         </div>
+          <div class="rating-container">
+   
+            <p>Rate :</p>
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+            <p class="rating-value">your rating : 0</p>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+                 <div class="img text-box">
+         <a href="https://ar.wikipedia.org/wiki/%D9%83%D9%88%D9%8A%D9%83%D9%86%D9%87%D9%88%D9%81"><img src="imgeS/Keukenhof Gardens, Netherlands.jpeg" class="europe-img"></a>
+         <pre style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"<h1 style="align-items: center;">                                                                                                           KEUKENHOF GARDEN</h1> 
+             <h4 class="hover-text">             Keukenhof Garden, located near Lisse in the Netherlands, is often called the Garden of Europe and is one of the most
+                breathtaking flower parks in the world. Spanning over 32 hectares, it showcases millions of colorful blooms every spring, with tulips being the star
+                of the show. Open only from mid-March to mid-May, Keukenhof transforms into a vibrant paradise filled with tulips, daffodils, hyacinths, and many
+                rare flowers. Visitors can stroll along scenic pathways, admire sparkling fountains and lakes, and enjoy artistic floral displays. A visit to
+                Keukenhof is not just a walk through a garden, but an unforgettable journey into a living masterpiece of colors and nature's beauty.</h4></pre>
+                 </div>
+              <div class="rating-container">
+   
+            <p>Rate :</p>
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+            <p class="rating-value">your rating : 0</p>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="img2 text-box">
+         <a href="https://ar.wikipedia.org/wiki/%D8%AC%D8%A7%D9%85%D8%B9_%D8%A7%D9%84%D8%B3%D9%84%D8%B7%D8%A7%D9%86_%D8%A3%D8%AD%D9%85%D8%AF"><img src="imges/جامع السلطان احمد_ اهم المعلومات التاريخية _ صور من الداخل والخارج - تركي فلوج.jpeg" class="europe-img"></a>
+         <pre style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"<h1 style="align-items: center;">                                                                                                               THE SULTAN AHMAD MOSQUE</h1> 
+           <h4 class="hover-text">             The Sultan Ahmed Mosque in Istanbul, famously known as the Blue Mosque, is one of the most iconic and breathtaking landmarks
+            in Turkey. Constructed in the early 17th century during the reign of Sultan Ahmed I, this mosque is renowned for its magnificent architecture, featuring a 
+            grand central dome, six elegant minarets, and a stunning cascade of smaller domes. Inside, the walls are adorned with over 20,000 hand-painted blue İznik 
+            tiles, which give the mosque its famous nickname, while intricate calligraphy and stained glass windows create a serene and spiritual atmosphere. Visitors
+            can explore the vast courtyard, admire the delicate details of the marble floors and columns, and witness the harmonious blend of Ottoman and Islamic
+            architectural styles. Beyond being a place of worship, the Blue Mosque stands as a symbol of Istanbul’s rich history, culture, and artistic achievement,
+            attracting millions of tourists from around the world each year. </h4></pre>
+        </div>    
+         <div class="rating-container">
+   
+            <p>Rate :</p>
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+            <p class="rating-value">your rating : 0</p>
+        </div>
+        
+       <script>
+            const ratingContainers = document.querySelectorAll('.rating-container');
+
+            ratingContainers.forEach(container => {
+                const stars = container.querySelectorAll('.star');
+                const ratingValue = container.querySelector('.rating-value');
+                let selected = 0;
+
+                stars.forEach(star => {
+                    star.addEventListener('mouseover', () => {
+                        const value = star.getAttribute('data-value');
+                        highlightStars(value, stars);
+                    });
+
+                    star.addEventListener('mouseout', () => {
+                        highlightStars(selected, stars);
+                    });
+
+                    star.addEventListener('click', () => {
+                        selected = star.getAttribute('data-value');
+                        ratingValue.textContent = `your rating : ${selected}`;
+                        highlightStars(selected, stars);
+                    });
+                });
+            });
+
+            function highlightStars(num, stars) {
+                stars.forEach(star => {
+                    if (star.getAttribute('data-value') <= num) {
+                        star.classList.add('hovered');
+                    } else {
+                        star.classList.remove('hovered');
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>

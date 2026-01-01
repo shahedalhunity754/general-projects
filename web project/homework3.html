@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<head>
+    <title>Student Marksheet Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f8fb;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .header h2 {
+            margin: 10px 0 0;
+            font-size: 18px;
+            font-weight: normal;
+        }
+        .instructions {
+            background-color: #e8f4fc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 5px solid #3498db;
+        }
+        .instructions h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .instructions ol {
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin-bottom: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .student-name {
+            font-weight: bold;
+            background-color: #ecf0f1;
+        }
+        .total-row {
+            font-weight: bold;
+            background-color: #3498db;
+            color: white;
+        }
+        .btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .course-header {
+            background-color: #34495e;
+        }
+        @media (max-width: 600px) {
+            table {
+                font-size: 12px;
+            }
+            th, td {
+                padding: 8px 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Student Marksheet Generator</h1>
+        <h2>Summer Semester (2024-2025)</h2>
+    </div>
+
+    <div class="instructions">
+        <h3>Input Instructions:</h3>
+        <ol>
+            <li>You will be prompted to enter student names and their marks in three courses</li>
+            <li>Marks must be between 0 and 100</li>
+            <li>The system will calculate each student's average, each course average, and the overall average</li>
+            <li>Results will be displayed in the table below</li>
+        </ol>
+    </div>
+
+    <button class="btn" onclick="startInput()">Start Data Input</button>
+
+    <table id="marksTable">
+        <thead>
+            <tr>
+                <th rowspan="2">Name</th>
+                <th colspan="3">Students Marks</th>
+                <th rowspan="2">Average</th>
+            </tr>
+            <tr class="course-header">
+                <th>Database</th>
+                <th>Web Design</th>
+                <th>OS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- This section will be populated by JavaScript -->
+        </tbody>
+        <tfoot>
+            <!-- This section will be populated by JavaScript -->
+        </tfoot>
+    </table>
+
+    <script>
+        // Array to store student data
+        let students = [];
+        const courses = ['Database', 'Web Design', 'OS'];
+        
+        // Function to start data input
+        function startInput() {
+            students = []; // Reset the array
+            
+            for (let i = 0; i < 3; i++) {
+                let student = {};
+                
+                // Input student name
+                student.name = prompt(`Please enter the name of student ${i+1}:`);
+                
+                // Validate that name is not empty
+                while (!student.name || student.name.trim() === '') {
+                    student.name = prompt(`Invalid name. Please enter the name of student ${i+1}:`);
+                }
+                
+                // Input course marks
+                student.marks = [];
+                for (let j = 0; j < courses.length; j++) {
+                    let mark = parseFloat(prompt(`Please enter ${courses[j]} mark for ${student.name}:`));
+                    
+                    // Validate that mark is between 0 and 100
+                    while (isNaN(mark) || mark < 0 || mark > 100) {
+                        mark = parseFloat(prompt(`Invalid mark. Please enter a valid ${courses[j]} mark (0-100) for ${student.name}:`));
+                    }
+                    
+                    student.marks.push(mark);
+                }
+                
+                // Calculate student average
+                student.average = student.marks.reduce((sum, mark) => sum + mark, 0) / student.marks.length;
+                
+                students.push(student);
+            }
+            
+            // Generate the marksheet table
+            generateMarksheet();
+        }
+        
+        // Function to generate the marksheet table
+        function generateMarksheet() {
+            const tableBody = document.querySelector('#marksTable tbody');
+            const tableFoot = document.querySelector('#marksTable tfoot');
+            
+            // Clear previous content
+            tableBody.innerHTML = '';
+            tableFoot.innerHTML = '';
+            
+            // Add student rows
+            students.forEach(student => {
+                const row = document.createElement('tr');
+                
+                // Student name cell
+                const nameCell = document.createElement('td');
+                nameCell.textContent = student.name;
+                nameCell.className = 'student-name';
+                row.appendChild(nameCell);
+                
+                // Course marks cells
+                student.marks.forEach(mark => {
+                    const markCell = document.createElement('td');
+                    markCell.textContent = mark;
+                    row.appendChild(markCell);
+                });
+                
+                // Average cell
+                const avgCell = document.createElement('td');
+                avgCell.textContent = student.average.toFixed(2);
+                row.appendChild(avgCell);
+                
+                tableBody.appendChild(row);
+            });
+            
+            // Calculate and add course averages and overall average
+            const courseAverages = [];
+            let overallSum = 0;
+            let totalEntries = 0;
+            
+            for (let i = 0; i < courses.length; i++) {
+                let courseSum = 0;
+                students.forEach(student => {
+                    courseSum += student.marks[i];
+                    overallSum += student.marks[i];
+                    totalEntries++;
+                });
+                courseAverages.push(courseSum / students.length);
+            }
+            
+            const overallAverage = overallSum / totalEntries;
+            
+            // Add footer row with averages
+            const footerRow = document.createElement('tr');
+            footerRow.className = 'total-row';
+            
+            // "Total Average" cell
+            const totalLabelCell = document.createElement('td');
+            totalLabelCell.textContent = 'Total Average';
+            footerRow.appendChild(totalLabelCell);
+            
+            // Course average cells
+            courseAverages.forEach(avg => {
+                const avgCell = document.createElement('td');
+                avgCell.textContent = avg.toFixed(2);
+                footerRow.appendChild(avgCell);
+            });
+            
+            // Overall average cell
+            const overallAvgCell = document.createElement('td');
+            overallAvgCell.textContent = overallAverage.toFixed(2);
+            footerRow.appendChild(overallAvgCell);
+            
+            tableFoot.appendChild(footerRow);
+        }
+        
+        // Initialize with sample data
+        window.onload = function() {
+            students = [
+                {
+                    name: 'Ahmad',
+                    marks: [78, 80, 85],
+                    average: 81.00
+                },
+                {
+                    name: 'Ali',
+                    marks: [56, 75, 63],
+                    average: 64.67
+                },
+                {
+                    name: 'Mohamad',
+                    marks: [89, 88, 95],
+                    average: 90.67
+                }
+            ];
+            
+            generateMarksheet();
+        };
+    </script>
+</body>
+</html>

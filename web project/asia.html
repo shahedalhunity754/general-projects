@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> AsiaWenderMap.com</title>
+        <style>
+         body{
+            background: linear-gradient(to bottom right, #767693,#ffffdc);;
+            background-size:cover;
+            margin: 0;
+           
+        }
+    
+        .asia-img{
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin-top: 30px;/*بتخلي الصوره تنزل لتحت بمقدار معين */
+            object-fit:cover;/*بقص الصوره عشان ما تتمدد*/
+            box-shadow: 0 4px 10px rgb(255, 255, 255);
+        }
+
+          .img{
+            display:flex;
+            flex-direction: row-reverse;/* بخلي الصوره على اليمين وما استخدمنا الفلوت عشان قاعدين بنشتغل بفليكس بوكس */
+            align-items: center;/*بخلي النص  بمحاذاه وسط الصوره*/
+            gap: 30px;/*مسافه بين النص والصوره*/
+            color: aliceblue;
+
+          }
+        .img2{
+             display:flex;
+            align-items: center;/*بخلي النص  بمحاذاه وسط الصوره*/
+            gap: 30px;/*مسافه بين النص والصوره*/
+             color: aliceblue; 
+        
+        }
+        .hover-text{
+            font-size: 16px;
+            color: #ffffff;
+            transition: all 0.3 ease;
+            text-shadow: 2px 2px 2px black, 0 0 10px #500993;
+
+        }
+        .hover-text:hover{
+            color: #000000;
+            transform: scale(1.1);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        .text-box{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif', sans-serif;
+            
+        }
+        .text-box h1{
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .text-box h4{
+            line-height:1.6;
+            text-align: justify;
+        }
+        .star {
+                font-size: 30px;
+                cursor: pointer;
+                color: gray;
+            }
+            .star:hover, .star.hovered {
+                color: gold;
+            }
+            .rating-container {
+                text-align: center;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="img text-box ">
+        <a href="https://ar.wikipedia.org/wiki/%D8%A3%D9%86%D8%BA%D9%83%D9%88%D8%B1_%D9%88%D8%A7%D8%AA"><img src="imges/ស្រឡាញ់.jpeg" class="asia-img"></a>
+        <pre style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"<h1 style="align-items: center;" >                                                                                                           ANGKOR WAT TEMPLE</h1>
+        <h4 class="hover-text">             Angkor wat is one of the most famous temples in the world ,located in Siem Reap ,cambodia.It was built in the early 12th century
+        by King Suryavarman II as a Hindu temple .Today,Angkor Wat is not only the largest religious monument in the world but also 
+        a national symbol of Cambodia ,appearing proudly on the country's flag.With its beautifut lotus-shaped towers and detailed stone
+        carvings ,it attracts millions of visitors every year and has been listed as a UNESCO World Heritage site since 1992  </h4></pre>
+
+        </div>
+        <h2>Rate Place :</h2>
+        <div class="rating-container">
+           
+            <p>Rate :</p>
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+            <p class="rating-value">your rating : 0</p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+         <div class="img2 text-box ">
+         <a href="https://ar.wikipedia.org/wiki/%D8%B3%D9%88%D8%B1_%D8%A7%D9%84%D8%B5%D9%8A%D9%86_%D8%A7%D9%84%D8%B9%D8%B8%D9%8A%D9%85"><img src="imges/سور الصين العظيم.jpeg" class="asia-img"></a>
+         <pre style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"<h1 style="align-items: center;">                                                                                                          GREAT WALL IN CHINA</h1>
+       <h4 class="hover-text">              The Great wall in China is one of the most impressive and famous landmarks in the world . it streches across northern
+        China for about 21,196 kilometers,making it the longest wall ever built by humans .Construction began as early as the 7th century BC ,
+        and it was developed over many dynasties ,with the most signifient work done during the reign of Emperor Qin Shi Huang . The main
+        purpose of the wall was to protect china from northern invaders and nomadic tribes.Built from stones ,bricks ,and sometimes wood ,
+        it includes remarkable ancient engineering .Today , the Great Wall is not only a symbol of China's historical strength and
+        ingenuity but also a UNESCO World Heritage Site since 1987 , attracting millions of tourists from all over the world each year </h4></pre>
+         </div>
+           <div class="rating-container">
+            <p>Rate :</p>
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+            <p class="rating-value">your rating : 0</p>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="img text-box">
+        <a href="https://ar.wikipedia.org/wiki/%D8%AA%D8%A7%D8%AC_%D9%85%D8%AD%D9%84"><img src="imges/download (5).jpeg" class="asia-img"></a> 
+                 <pre style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"<h1 style="align-items: center;">                                                                                                          TAJ MAHAL</h1>
+       <h4 class="hover-text">              The Taj Mahal, located in Agra, India, is one of the most iconic monuments in the world. Built between 1632 and 1653
+         by the Mughal Emperor Shah Jahan in memory of his beloved wife Mumtaz Mahal, it stands as a timeless symbol of eternal love. This
+        breathtaking mausoleum is crafted from white marble inlaid with precious stones, showcasing the stunning Mughal architecture that
+        blends Islamic, Persian, and Indian styles. With its majestic dome, four elegant minarets, and beautiful gardens reflecting in
+        serene pools, the Taj Mahal continues to captivate millions of visitors. Recognized as a UNESCO World Heritage Site in 1983,
+        it remains a true masterpiece admired for its beauty and historical significance.</h4></pre>
+        </div>
+        <div class="rating-container">
+   
+            <p>Rate :</p>
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+            <p class="rating-value">your rating : 0</p>
+        </div>
+ 
+        <br>
+        <br>
+        <br>
+        <br> 
+         <div class="img2 text-box">
+         <a href="https://ar.wikipedia.org/wiki/%D9%87%D9%88%D9%8A_%D8%A3%D9%86"><img src="imges/South Korea 🧡.jpeg" class="asia-img"></a>
+         <pre style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"<h1 style="align-items: center;">                                                                                                          HOI AN</h1> 
+               <h4 class="hover-text">             Hoi An, a charming town on Vietnam's central coast, is a living museum of history and culture. Once a bustling
+                 trading port between the 15th and 19th centuries, it became a unique melting pot of Chinese, Japanese, Indian, and European
+                influences. Today, Hoi An enchants visitors with its ancient wooden houses, lantern-lit streets, and vibrant night markets. 
+                The famous Japanese Covered Bridge, colorful temples, and peaceful riverside make it a true treasure. Recognized as a UNESCO
+                World Heritage Site in 1999, the town offers unforgettable experiences, from boat rides on the Thu Bon River to relaxing at 
+                An Bang Beach. With its warm tropical climate and magical Lantern Festival nights, Hoi An is a destination that blends history,
+                beauty, and tradition in every corner. </h4></pre>
+         </div>
+               <div class="rating-container">
+            <p>Rate :</p>
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+            <p class="rating-value">your rating : 0</p>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+                 <div class="img text-box">
+         <a href="https://ar.wikipedia.org/wiki/%D8%A8%D8%B1%D8%AC%D8%A7_%D8%A8%D8%AA%D8%B1%D9%88%D9%86%D8%A7%D8%B3_%D8%A7%D9%84%D8%AA%D9%88%D8%A3%D9%85"><img src="imges/خطأ في قاعدة البيانات.jpeg" class="asia-img"></a>
+         <pre style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"<h1 style="align-items: center;">                                                                                                           PETRONAS TWIN TOWERS</h1> 
+             <h4 class="hover-text">             The Petronas Twin Towers, soaring high in the heart of Kuala Lumpur, Malaysia, are among the world's most iconic 
+                skyscrapers. Standing at 452 meters with 88 floors each, they were the tallest buildings in the world from 1998 to 2004 and 
+                remain the tallest twin towers on the planet. Designed by architect César Pelli, the towers beautifully blend Islamic-inspired
+                motifs with modern architecture, featuring shimmering glass façades and steel structures. Connecting the two towers is the
+                famous Skybridge, located on the 41st and 42nd floors, offering breathtaking views of the city. Today, the towers house offices, 
+                a grand shopping mall, an art gallery, and a convention center, making them both a symbol of Malaysia’s progress and a must-visit
+                landmark for travelers  worldwide </h4></pre>
+                 </div>
+                <div class="rating-container">
+            <p>Rate :</p>
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+            <p class="rating-value">your rating : 0</p>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="img2 text-box">
+         <a href="https://ar.wikipedia.org/wiki/%D8%A8%D8%A7%D9%84%D9%8A"><img src="imges/Your Bali Adventure 15 Must-Visit Locations for Stunning Photos (1).jpeg" class="asia-img"></a>
+         <pre style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"<h1 style="align-items: center;">                                                                                                               BALI </h1> 
+           <h4 class="hover-text">             Bali The Island of Gods. Bali, located in Indonesia, is a tropical paradise known for its
+            breathtaking beaches, lush rice terraces, and vibrant culture. The island offers endless adventures from surfing in Kuta
+            Beach and diving in Nusa Penida, to watching the sunrise over Mount Batur. Rich in tradition, Bali is home to stunning 
+            temples like Tanah Lot and Besakih, and its people keep the island's spirit alive with colorful dances and ceremonies.
+            With its warm climate, delicious local dishes, and enchanting landscapes, Bali truly lives up to its name as the Island
+            of gods </h4></pre>
+        </div>    
+            <div class="rating-container">
+            <p>Rate :</p>
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+            <p class="rating-value">your rating : 0</p>
+        </div>          
+            <p class ="rating-value">your rating :0</p>
+        </div>
+
+   <script>
+            const ratingContainers = document.querySelectorAll('.rating-container');
+
+            ratingContainers.forEach(container => {
+                const stars = container.querySelectorAll('.star');
+                const ratingValue = container.querySelector('.rating-value');
+                let selected = 0;
+
+                stars.forEach(star => {
+                    star.addEventListener('mouseover', () => {
+                        const value = star.getAttribute('data-value');
+                        highlightStars(value, stars);
+                    });
+
+                    star.addEventListener('mouseout', () => {
+                        highlightStars(selected, stars);
+                    });
+
+                    star.addEventListener('click', () => {
+                        selected = star.getAttribute('data-value');
+                        ratingValue.textContent = `your rating : ${selected}`;
+                        highlightStars(selected, stars);
+                    });
+                });
+            });
+
+            function highlightStars(num, stars) {
+                stars.forEach(star => {
+                    if (star.getAttribute('data-value') <= num) {
+                        star.classList.add('hovered');
+                    } else {
+                        star.classList.remove('hovered');
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>

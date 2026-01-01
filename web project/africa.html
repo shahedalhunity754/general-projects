@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> AfricWenderMap.com</title>
+        <style>
+            body{
+            background: linear-gradient(to bottom right, #c2c2cc,#ffffdc);
+            background-size:cover;
+            margin: 0;
+           
+        }
+        
+        .img{
+            display:flex;
+            flex-direction: row-reverse;/* بخلي الصوره على اليمين وما استخدمنا الفلوت عشان قاعدين بنشتغل بفليكس بوكس */
+            align-items: center;/*بخلي النص  بمحاذاه وسط الصوره*/
+            gap: 30px;/*مسافه بين النص والصوره*/
+            color: aliceblue;
+
+        }
+        .africa-img{
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin-top: 30px;/*بتخلي الصوره تنزل لتحت بمقدار معين */
+            object-fit:cover;/*بقص الصوره عشان ما تتمدد*/
+            box-shadow: 0 4px 10px rgb(255, 255, 255);
+        }
+        .img2{
+             display:flex;
+            align-items: center;/*بخلي النص  بمحاذاه وسط الصوره*/
+            gap: 30px;/*مسافه بين النص والصوره*/
+             color: aliceblue; 
+        
+        }
+        .hover-text{
+            font-size: 16px;
+            transition: all 0.3 ease;
+            
+            color: #ffffff;
+            text-shadow: 2px 2px 2px black, 0 0 10px #500993;;
+
+
+        }
+        .hover-text:hover{
+            color: #000000;
+            transform: scale(1.1);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        .text-box{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif', sans-serif;
+            
+        }
+        .text-box h1{
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .text-box h4{
+            line-height:1.6;
+            text-align: justify;
+        }
+        .star {
+                font-size: 30px;
+                cursor: pointer;
+                color: gray;
+            }
+            .star:hover, .star.hovered {
+                color: gold;
+            }
+            .rating-container {
+                text-align: center;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="img text-box">
+        <a href="https://ar.wikipedia.org/wiki/%D8%A3%D9%87%D8%B1%D8%A7%D9%85_%D8%A7%D9%84%D8%AC%D9%8A%D8%B2%D8%A9"><img src="imges/download (7).jpeg" class="africa-img"></a>
+        <pre style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"<h1 style="align-items: center;" >                                                                                                           THE PYRAMIDS</h1>
+        <h4 class="hover-text">             The Pyramids of Giza in Egypt are among the most remarkable and enduring monuments in human history.
+            Built over 4,500 years ago,these colossal structures were designed as tombs for the pharaohs, reflecting the ancient Egyptians'
+            profound beliefs in the afterlife. The Great Pyramid, the largest of them all, was originally covered in gleaming white limestone
+            and demonstrates incredible precision in construction, considering the technology of that era. Today, the pyramids continue to
+            amaze visitors from around the world, standing as timeless symbols of Egypt's rich culture, engineering brilliance, and 
+            historical legacy.  </h4></pre>
+
+        </div>
+        <h2>Rate Place :</h2>
+        <div class="rating-container">
+           
+            <p>Rate :</p>
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+            <p class="rating-value">your rating : 0</p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+         <div class="img2 text-box">
+         <a href="https://ar.wikipedia.org/wiki/%D9%85%D8%B1%D8%A7%D9%83%D8%B4"><img src="imges/MARRAKECH _ MOROCCO.jpeg" class="africa-img"></a>
+         <pre style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"<h1 style="align-items: center;">                                                                                                          MARRAKECH</h1>
+       <h4 class="hover-text">              Marrakech, known as the “Red City” of Morocco, is a vibrant destination full of color, culture, and
+         history. Famous for its bustling souks, lively squares, and stunning palaces, the city offers a unique blend of traditional Moroccan
+          life and modern charm. Visitors can wander through the narrow streets of the Medina, explore the majestic Bahia Palace, or relax in
+           the serene Majorelle Garden. Marrakech is also known for its aromatic spices, delicious cuisine, and captivating festivals, making 
+           it a city that excites all the senses. With its warm climate and rich heritage, Marrakech is truly a jewel of North Africa. </h4></pre>
+         </div>
+        <h2>Rate Place :</h2>
+        <div class="rating-container">
+           
+            <p>Rate :</p>
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+            <p class="rating-value">your rating : 0</p>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="img text-box">
+        <a href="https://ar.wikipedia.org/wiki/%D9%85%D8%B3%D8%AC%D8%AF_%D8%A7%D9%84%D8%AD%D8%B3%D9%86_%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A"><img src="imges/مسجد  الحسن الثاني في المغرب__.jpeg" class="africa-img"></a> 
+                 <pre style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"<h1 style="align-items: center;">                                                                                                          THE HASSAN II MOSQUE </h1>
+       <h4 class="hover-text">              The Hassan II Mosque in Casablanca, Morocco, is one of the largest and most spectacular mosques in the world.
+        Completed in 1993, it stands partly over the Atlantic Ocean, creating a breathtaking view where the sea meets stunning architecture. The mosque 
+        features intricate mosaics, carved marble, and a towering minaret that reaches 210 meters, making it the tallest in the world. With its blend of
+        traditional Moroccan craftsmanship and modern engineering, the Hassan II Mosque is not only a place of worship but also a symbol of Morocco’s 
+        rich cultural heritage, attracting millions of visitors each year.</h4></pre>
+        </div>
+       <h2>Rate Place :</h2>
+        <div class="rating-container">
+           
+            <p>Rate :</p>
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+            <p class="rating-value">your rating : 0</p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br> 
+         <div class="img2 text-box">
+         <a href="https://ar.wikipedia.org/wiki/%D9%88%D8%A7%D8%AF%D9%8A_%D8%A7%D9%84%D9%85%D9%84%D9%88%D9%83"><img src="imges/download (8).jpeg" class="africa-img"></a>
+         <pre style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"<h1 style="align-items: center;">                                                                                                          THE VAIIEY OF THE KINGS</h1> 
+               <h4 class="hover-text">             The Valley of the Kings in Egypt is a legendary burial ground that holds the tombs of ancient Pharaohs,
+                including the famous Tutankhamun. Carved into the desert cliffs on the west bank of the Nile, this historic site showcases the incredible 
+                artistry and beliefs of ancient Egyptian civilization. Visitors can explore elaborately decorated tombs adorned with hieroglyphics and
+                vivid paintings that tell stories of the afterlife. With its mysterious atmosphere and priceless treasures, the Valley of the Kings 
+                remains one of the most fascinating archaeological sites in the world, offering a glimpse into Egypt’s royal past. </h4></pre>
+        <h2>Rate Place :</h2>
+        <div class="rating-container">
+           
+            <p>Rate :</p>
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+            <p class="rating-value">your rating : 0</p>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+                 <div class="img text-box">
+         <a href="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%83%D8%B1%D9%86%D9%83"><img src="imges/معبد الكرنك بالاقصر في مصر 🇪🇬.jpeg" class="africa-img"></a>
+         <pre style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"<h1 style="align-items: center;">                                                                                                           THE KARNAK</h1> 
+             <h4 class="hover-text">             The Karnak Temple Complex in Luxor, Egypt, is one of the largest and most impressive religious sites in
+                the world. Built over more than 2,000 years, it is dedicated primarily to the god Amun and features massive columns, towering obelisks,
+                and intricate hieroglyphics that showcase the grandeur of ancient Egyptian architecture. Visitors can wander through vast hypostyle
+                halls, explore sacred lakes, and admire the detailed carvings that tell stories of pharaohs and their gods. With its historical 
+                significance and breathtaking scale, Karnak Temple remains a must-visit destination for anyone fascinated by ancient history and 
+                culture.</h4></pre>
+                 </div>
+               <h2>Rate Place :</h2>
+        <div class="rating-container">
+           
+            <p>Rate :</p>
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+            <p class="rating-value">your rating : 0</p>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="img2 text-box">
+         <a href="https://ar.wikipedia.org/wiki/%D8%B4%D9%84%D8%A7%D9%84%D8%A7%D8%AA_%D9%81%D9%8A%D9%83%D8%AA%D9%88%D8%B1%D9%8A%D8%A7"><img src="imges/شلالات فيكتوريا زمبابوي.jpeg" class="africa-img"></a>
+         <pre style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"<h1 style="align-items: center;">                                                                                                               VICTORIA FALLS</h1> 
+           <h4 class="hover-text">             Victoria Falls, located on the border between Zambia and Zimbabwe, is one of the most spectacular
+             waterfalls in the world. Known locally as “Mosi-oa-Tunya” or “The Smoke That Thunders,” the falls stretch over 1,700 meters wide and 
+             drop more than 100 meters, creating an awe-inspiring display of water and mist. Surrounded by lush rainforest, Victoria Falls offers 
+             breathtaking views, thrilling adventures like bungee jumping and white-water rafting, and an unforgettable natural experience. Its
+             sheer power and beauty make it a must-visit destination for nature lovers and travelers seeking wonder. </h4></pre>
+        </div>    
+          <h2>Rate Place :</h2>
+        <div class="rating-container">
+           
+            <p>Rate :</p>
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+            <p class="rating-value">your rating : 0</p>
+        </div>
+        
+       <script>
+            const ratingContainers = document.querySelectorAll('.rating-container');
+
+            ratingContainers.forEach(container => {
+                const stars = container.querySelectorAll('.star');
+                const ratingValue = container.querySelector('.rating-value');
+                let selected = 0;
+
+                stars.forEach(star => {
+                    star.addEventListener('mouseover', () => {
+                        const value = star.getAttribute('data-value');
+                        highlightStars(value, stars);
+                    });
+
+                    star.addEventListener('mouseout', () => {
+                        highlightStars(selected, stars);
+                    });
+
+                    star.addEventListener('click', () => {
+                        selected = star.getAttribute('data-value');
+                        ratingValue.textContent = `your rating : ${selected}`;
+                        highlightStars(selected, stars);
+                    });
+                });
+            });
+
+            function highlightStars(num, stars) {
+                stars.forEach(star => {
+                    if (star.getAttribute('data-value') <= num) {
+                        star.classList.add('hovered');
+                    } else {
+                        star.classList.remove('hovered');
+                    }
+                });
+            }
+        </script>
+
+            
+    </body>
+</html>
